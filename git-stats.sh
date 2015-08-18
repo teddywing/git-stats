@@ -25,4 +25,4 @@ echo "$shortlog" | awk '{
 		if (i != NF) printf " "
 	}
 	printf ":%s\n", $1
-}' | asciigraph  -l "$1" --color
+}' | asciigraph  -l "Commit count" --color
