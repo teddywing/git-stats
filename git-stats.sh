@@ -19,4 +19,10 @@ cd $GIT_REPO
 
 shortlog=$(git shortlog -ns --no-merges)
 
-echo "$shortlog" | awk '{printf "%s:%s\n", $2, $1}' | asciigraph  -l "$1" --color
+echo "$shortlog" | awk '{
+	for (i = 2; i <= NF; i++) {
+		printf "%s", $i
+		if (i != NF) printf " "
+	}
+	printf ":%s\n", $1
+}' | asciigraph  -l "$1" --color
