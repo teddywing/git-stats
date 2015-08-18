@@ -17,4 +17,6 @@ GIT_REPO=$1
 
 cd $GIT_REPO
 
-git shortlog -ns --no-merges | awk '{printf "%s:%s\n", $2, $1}' | asciigraph  -l "$1" --color
+shortlog=$(git shortlog -ns --no-merges)
+
+echo "$shortlog" | awk '{printf "%s:%s\n", $2, $1}' | asciigraph  -l "$1" --color
