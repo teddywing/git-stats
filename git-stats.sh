@@ -1,4 +1,7 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+
+set -euo pipefail
+IFS=$'\n\t'
 
 function usage () {
 	echo "Usage: $0 path/to/git/repository"
