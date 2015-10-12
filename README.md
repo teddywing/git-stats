@@ -31,5 +31,11 @@ Here's an example from this repository:
 	███████████████████████████████████████████████████████████    56.0  Teddy Wing
 
 
+## Installing
+Install requirements before running the script:
+
+	$ pip install -r requirements.txt
+
+
 ## License
 Licensed under the MIT license. See the included LICENSE file.
